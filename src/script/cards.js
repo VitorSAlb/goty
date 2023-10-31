@@ -115,11 +115,11 @@
 //     // Adicione mais objetos para mais cards
 //   ];
 
-import * as principal from './jogos.js';
+import * as all from './jogos.js';
   
 const container = document.getElementById("container");
 
-     principal.Jogos.forEach( item => {
+     all.cardData.forEach( item => {
         const card = document.createElement("div");
         card.classList.add("nr-card");
 
