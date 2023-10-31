@@ -146,4 +146,4 @@ export const cardData = [
     // Adicione mais objetos para mais cards
   ];
 
-  
+  export default { Jogos, jogosData };
