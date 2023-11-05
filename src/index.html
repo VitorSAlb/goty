@@ -6,13 +6,15 @@
     <title>GOTY</title>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/banner.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <script type="module" src="./script/cards.js"></script>
+    <script type="module" src="/src/script/nr-section.js"></script>
+    <script type="module" src="/src/script/banner.js"></script>
     <header>
         <nav>
             <a href="/src/index.html"><img src="imgs/GOTY-logo.svg" alt="Logo do site Game Of The Year"></a>
@@ -38,33 +40,9 @@
         <div class="tittle-banner">
             <h3>Most Popular Today</h3>
         </div>
-        <div class="main-banner">
-            <div class="capag-banner">
-
-            </div>
-
-            <div class="info-banners">
-                <div class="nameg-banner">
-                    <h1>Nome do Jogo</h1>
-                    <h3>dd/mm/aaaa</h3>
-                </div>
-                <div class="publisherg-banner">
-                    <h2>publisher</h2>
-                </div>
-
-                <div class="chao">
-                    <div class="scoreg-banner">
-                        <h1>91</h1>
-                        <h3>user score</h3>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progress"></div>
-                    </div>
-                </div>
-            </div>    
-
+        <div id="bannerP">
+            
         </div>
-
         <!-- New Releases-->
         <div>
             <div class="tittle">
@@ -72,13 +50,13 @@
                 <hr>
             </div>
 
-            <div class="nr-section" id="container">
+            <div class="nr-section" id="newRelease">
                 
             </div> 
         </div>
 
         <!-- TGY e Cards com diversos jogos-->
-
+        
         <div class="section-two">
             <div class="tgy-section">
                 <div class="tittle">
@@ -86,140 +64,9 @@
                     <hr>
                 </div>
 
-                <div class="tgy-container">
-                    <div class="tgy-card">
-                        <div class="photo-card">
-                            <img>
-                        </div>
-    
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
-                            </div>
-    
-                            <div class="score">
-                                <h1>91</h1>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tgy-card">
-                        <div class="photo-card">
-                            <img>
-                        </div>
-    
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
-                            </div>
-    
-                            <div class="score">
-                                <h1>91</h1>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tgy-card">
-                        <div class="photo-card">
-                            <img>
-                        </div>
-    
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
-                            </div>
-    
-                            <div class="score">
-                                <h1>91</h1>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tgy-card">
-                        <div class="photo-card">
-                            <img>
-                        </div>
-    
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
-                            </div>
-    
-                            <div class="score">
-                                <h1>91</h1>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tgy-card">
-                        <div class="photo-card">
-                            <img>
-                        </div>
-    
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
-                            </div>
-    
-                            <div class="score">
-                                <h1>91</h1>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tgy-card">
-                        <div class="photo-card">
-                            <img>
-                        </div>
-    
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
-                            </div>
-    
-                            <div class="score">
-                                <h1>91</h1>
-                            </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="nr-section" id="newRelease">
+                
+                </div> 
             </div>
 
             <div class="cards-slider">

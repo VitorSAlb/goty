@@ -1,0 +1,98 @@
+.tittle-banner h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding: 0;
+    background-color: #D6D6D6;
+}
+
+.main-banner {
+    display: flex;
+    background-color: #BDBDBD;
+    width: 100%;
+    height: fit-content;
+    padding: 1.5rem 15rem;
+    font-family: 'Roboto', Times, serif;
+    font-weight: 100;
+    font-size: 1rem;
+    cursor: pointer;
+    border-top: 1px solid #898989;
+    border-left: 1px solid #898989;
+    border-right: 1px solid #898989;
+}
+
+.main-banner:hover {
+    opacity: 0.7;
+}
+
+.capag-banner {
+    justify-content: left;
+    background-color: #2d2d2d;
+    width: 310px;
+    height: 404px;
+}
+
+.capag-banner img {
+    border: 0.5px solid black;
+    height: 404px;
+    width: 310px;
+}
+
+.info-banners {
+    display: grid;
+    width: 100%;
+    margin-left: 0.5rem;
+    grid-template-rows: 10% 10% 80%;
+}
+
+.nameg-banner {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.publisherg-banner {
+    display: grid;
+    align-items: start;
+    width: fit-content;
+    height: fit-content;
+}
+
+.chao {
+    display: grid;
+    align-items: end;
+    grid-template-rows: 99% 1%;
+}
+
+.scoreg-banner {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: baseline;
+}
+
+
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+}
+
+.progress-bar {
+    width: 91%;
+    height: 3.5px;
+    background-color: #4caf50;
+    transition: width 0.5s;
+}
+
+.progress-bar-green {
+    background-color: #299D49 ;
+}
+
+.progress-bar-yellow {
+    background-color: #D7AE1D;
+}
+
+.progress-bar-red {
+    background-color: #D82929;
+}   

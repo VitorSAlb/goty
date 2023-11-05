@@ -1,26 +1,29 @@
 import { Jogos, jogosData } from './jogos.js';
 
-const container = document.getElementById("container");
+const newRelease = document.getElementById("newRelease");
+
+const maxCards = 8;
+const startIndex = jogosData.length - maxCards;
+const limiteDeJogosData = jogosData.slice(startIndex);
 
 function cardClick(index) {
-    // Este é o código que será executado quando um card for clicado
-    console.log("O card " + index + " clicado!");
   
-    var valorIndex = index;
+  console.log("O card " + index + " clicado!");
 
-    // Redirecione para uma página HTML com o valor do índice como parâmetro na URL.
-    window.location.href = "jogo.html?index=" + valorIndex;
+  var valorIndex = index + (jogosData.length - 8);
 
-    // Use o valor do índice em seu script, por exemplo, exibindo-o no console.
-    console.log("Valor do índice: " + valorIndex);
+  // Redireciona para uma página HTML com o valor do índice como parâmetro na URL.
+  window.location.href = "pages/jogo.html?index=" + valorIndex;
+
+  console.log("Valor do índice: " + valorIndex);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
 
   function createCard(item) {
-    const card = document.createElement("div");
-    card.classList.add("nr-card");    
-    console.log("nr-section criada");
+    const card = document.createElement("div")
+    card.classList.add("nr-card")    
+    console.log("nr-section criada")
 
     const photoCard = document.createElement("div");
     photoCard.classList.add("photo-card");
@@ -29,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     imgElement.style.height = "202px"
     imgElement.style.width = "155px"
     imgElement.src = "/src/imgs/capaGames/" + item.imagesLink + ".svg";
-    imgElement.alt = `Capa do jogo ${item.title}`
 
     photoCard.appendChild(imgElement);
 
@@ -70,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
     progressBar.classList.add("progress-bar");
 
     if (item.progress < 50) {
-      progressBar.classList.add("progress-bar-red"); // Progresso menor que 50, cor verde
+      progressBar.classList.add("progress-bar-red"); 
     } else if (item.progress < 80) {
-      progressBar.classList.add("progress-bar-yellow"); // Progresso menor que 80, cor amarela
+      progressBar.classList.add("progress-bar-yellow");
     } else {
-      progressBar.classList.add("progress-bar-green"); // Progresso igual ou maior que 80, cor vermelha
+      progressBar.classList.add("progress-bar-green"); 
     }
 
     progressBar.style.width = `${item.progress}%`;
@@ -92,9 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
-  jogosData.forEach( (item, index) => {
+  limiteDeJogosData.forEach( (item, index) => {
     const card = createCard(item);
     card.addEventListener('click', () => cardClick(index));
-    container.appendChild(card);
-  }); 
+    newRelease.appendChild(card);
+  });
 });
+
