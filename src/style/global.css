@@ -100,6 +100,7 @@ hr {
     justify-content: space-around;
 }
 
+.tgy-card,
 .nr-card {
     background-color: #D9D9D9;
     width: 155px;
@@ -108,6 +109,7 @@ hr {
     cursor: pointer;
 }
 
+.tgy-card:hover,
 .nr-card:hover {
     opacity: 0.7;
 }
@@ -138,6 +140,10 @@ hr {
 
 .name-card h1 {
     font-size: small;
+    width: 100px; /* Largura máxima para o contêiner do título */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .name-card p {
@@ -179,18 +185,6 @@ hr {
     padding: 0 4rem;
 }
 
-.tgy-card {
-    background-color: #D9D9D9;
-    width: 155px;
-    height: 202px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.tgy-card:hover {
-    opacity: 0.7;
-}
-
 .cards-slider {
     width: 50%;
 }
@@ -213,6 +207,44 @@ hr {
     height: 89%;
 }
 
+.chao {
+    display: grid;
+    align-items: end;
+    grid-template-rows: 99% 1%;
+}
+
+.scoreg-banner {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: baseline;
+}
+
+
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+}
+
+.progress-bar {
+    width: 91%;
+    height: 3.5px;
+    background-color: #4caf50;
+    transition: width 0.5s;
+}
+
+.progress-bar-green {
+    background-color: #299D49 ;
+}
+
+.progress-bar-yellow {
+    background-color: #D7AE1D;
+}
+
+.progress-bar-red {
+    background-color: #D82929;
+}   
+
 footer {
     background-color: #414141;
     height: 100px;
@@ -223,4 +255,30 @@ footer {
 footer p {
     color: #ccc;
     align-items: end;
+}
+
+@media only screen and (max-width: 1200px)  {
+    body {
+        background-color: #FFFF;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .tittle h2 {
+        font-size: 1rem;
+    }
+
+    .nr-section {
+        display: flex;
+    }
+
+    .tgy-section {
+        width: 100%;
+    }
+
+    .cards-slider {
+        display: none;
+    }
 }

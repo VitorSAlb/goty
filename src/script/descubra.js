@@ -1,30 +1,17 @@
 import { Jogos, jogosData } from './jogos.js';
+import findGID from './jogos.js';
 
 const Descubra = document.getElementById("Descubra");
 
-function cardClick(index) {
-  // Este é o código que será executado quando um card for clicado
-  console.log("O card " + index + " clicado!");
-
-  var valorIndex = index;
-
-  // Redirecione para uma página HTML com o valor do índice como parâmetro na URL.
-  window.location.href = "jogo.html?index=" + valorIndex;
-
-  // Use o valor do índice em seu script, por exemplo, exibindo-o no console.
-  console.log("Valor do índice: " + valorIndex);
+function cardClick(id) {
+  const jogo = findGID(id);
+  if (jogo) {
+    // Crie uma URL com a ID do jogo como parâmetro
+    window.location.href = `jogo.html?id=${id}`;
+  } else {
+    console.log("Jogo não encontrado.");
+  }
 }
-// FUNÇÃO PARA ALEATORIAZAR ARRAY, NÃO ESTÁ FUNCIONANDO, POIS O LINK DE REDIRECIONAMENTO ESTÁ INDO ERRADO!
-// function shuffleArray(array) {
-//   const shuffledArray = array.slice(); // Faça uma cópia da array para não afetar a original
-
-//   for (let i = shuffledArray.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1)); // Gere um índice aleatório
-//       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Troque os elementos de posição
-//   }
-
-//   return shuffledArray;
-// }
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -109,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // const cartoesExibidos = jogosEmbaralhados.slice(0, maxCards); // Seleciona os primeiros 8 cartões embaralhados
 
   // Use o forEach para criar cartões para os elementos selecionados
-  jogosData.forEach(function (item, index) {
+  jogosData.forEach(function (item) {
       const cardP = createCard(item);
-      cardP.addEventListener('click', () => cardClick(index));
+      cardP.addEventListener('click', () => cardClick(item.id));
       Descubra.appendChild(cardP);
   });
    

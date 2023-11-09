@@ -1,6 +1,43 @@
-import { Jogos, jogosData } from "./jogos";
+import { Jogos, jogosData} from "./jogos.js";
+import findGID from './jogos.js';
 
 const tgyScript = document.getElementById("tgyScript");
+
+// Função de comparação para classificar por progresso decrescente e data de lançamento decrescente
+function compareItems(a, b) {
+  // Primeiro, compare o progresso (progress) de forma decrescente
+  if (a.progress > b.progress) {
+    return -1;
+  } else if (a.progress < b.progress) {
+    return 1;
+  } else {
+    // Se o progresso for igual, compare as datas de lançamento (releaseDate) de forma decrescente
+    if (a.releaseDate > b.releaseDate) {
+      return -1;
+    } else if (a.releaseDate < b.releaseDate) {
+      return 1;
+    }
+    return 0;
+  }
+}
+
+// Classifique a matriz jogosData com base na função de comparação
+jogosData.sort(compareItems);
+
+// Pegue os 6 primeiros itens após a classificação
+const top6Games = jogosData.slice(0, 6);
+
+
+
+function cardClick(id) {
+  const jogo = findGID(id);
+  if (jogo) {
+    // Crie uma URL com a ID do jogo como parâmetro
+    window.location.href = `pages/jogo.html?id=${id}`;
+  } else {
+    console.log("Jogo não encontrado.");
+  }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -28,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     titleElement.textContent = item.title;
 
     const releaseDateElement = document.createElement("p");
-    releaseDateElement.textContent = item.releaseDate;
+    releaseDateElement.textContent = `${item.releseData}`;
 
     nameCard.appendChild(titleElement);
     nameCard.appendChild(releaseDateElement);
@@ -45,7 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     score.classList.add("score");
 
     const h1 = document.createElement("h1");
-    h1.textContent = item.progress;
+    score.style.margin = "0 auto";
+    score.textContent = item.progress
 
     const progressContainer = document.createElement("div");
     progressContainer.classList.add("progress-container");
@@ -66,8 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
-  jogosData.forEach(item => {
+  top6Games.forEach((item) => {
     const card = createCard(item);
+    card.addEventListener('click', () => cardClick(item.id)); 
     tgyScript.appendChild(card);
   });
 });

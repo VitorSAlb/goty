@@ -1,0 +1,30 @@
+.title-search {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    margin: 0.5rem 0.5rem;
+}
+
+.title-search ul {
+    display: flex;
+    list-style: none;
+}
+
+.title-search ul li {
+    margin: 0 1rem;
+}
+
+.title-search ul li a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title-search ul li a:hover {
+    opacity: 0.7;
+}
+
+.title-search ul li a:active,
+.title-search ul li a:enabled {
+    font-weight: 500;
+}

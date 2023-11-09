@@ -1,20 +1,17 @@
 import { Jogos, jogosData } from './jogos.js';
+import findGID from './jogos.js';
 
 const container = document.getElementById("container");
 
-function cardClick(index) {
-    // Este é o código que será executado quando um card for clicado
-    console.log("O card " + index + " clicado!");
-  
-    var valorIndex = index;
-
-    // Redirecione para uma página HTML com o valor do índice como parâmetro na URL.
-    window.location.href = "jogo.html?index=" + valorIndex;
-
-    // Use o valor do índice em seu script, por exemplo, exibindo-o no console.
-    console.log("Valor do índice: " + valorIndex);
+function cardClick(id) {
+  const jogo = findGID(id);
+  if (jogo) {
+    // Crie uma URL com a ID do jogo como parâmetro
+    window.location.href = `jogo.html?id=${id}`;
+  } else {
+    console.log("Jogo não encontrado.");
+  }
 }
-
 document.addEventListener('DOMContentLoaded', function() {
 
   function createCard(item) {
@@ -41,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const titleElement = document.createElement("h1");
     titleElement.textContent = item.title;
+    
+    if (titleElement.textContent.length > 30) { 
+      titleElement.textContent = titleElement.textContent.substring(0, 30) + '...';
+    }
 
     const releaseDateElement = document.createElement("p");
     releaseDateElement.textContent = `${item.releseData}`;
@@ -92,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
-  jogosData.forEach( (item, index) => {
+  jogosData.forEach( (item) => {
     const card = createCard(item);
-    card.addEventListener('click', () => cardClick(index));
+    card.addEventListener('click', () => cardClick(item.id));
     container.appendChild(card);
   }); 
 });

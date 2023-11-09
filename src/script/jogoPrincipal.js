@@ -1,12 +1,16 @@
 import { Jogos, jogosData } from './jogos.js'
+import findGID from './jogos.js';
 
 const jogoPrincipal = document.getElementById("jogoPrincipal");
 // const cardClicado = cardClick();
 //ideia, os dois numeros do slice eu consigo selecionar o jogo, caso eu identifique jogo por jogo e consiguirei caminhar entre ele
-var urlParams = new URLSearchParams(window.location.search);
-var valorIndex = urlParams.get("index");
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
 
-var itemDesejado = jogosData[valorIndex];
+const targetId = parseInt(id);
+
+const jogoDesejado = findGID(targetId)
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -169,13 +173,26 @@ document.addEventListener('DOMContentLoaded', function () {
         cardP.appendChild(infoJogo);
 
         return cardP;
-    }
+    };
 
-    if (itemDesejado) {
-        const cardP = createGamePG(itemDesejado);
+    // if (itemDesejado) {
+    //     // Agora você tem o objeto do jogo com base na ID
+    //     const cardP = createGamePG(itemDesejado);
+    //     jogoPrincipal.appendChild(cardP);
+    // } else {
+    //     console.log("Jogo não encontrado com a ID: " + id);
+    // }
+
+    // jogosData.forEach((itemDesejado) => {
+    //     const cardP = createGamePG(itemDesejado);
+    //     jogoPrincipal.appendChild(cardP);
+    // })
+
+    if (jogoDesejado) {
+        const cardP = createGamePG(jogoDesejado);
         jogoPrincipal.appendChild(cardP);
     } else {
-        console.error("O índice fornecido não é válido.");
+        console.log(`O ID ${targetId} não foi encontrado na array.`);
     }
 
-})
+});

@@ -1,4 +1,5 @@
 import { Jogos, jogosData } from './jogos.js';
+import findGID from './jogos.js';
 
 const newRelease = document.getElementById("newRelease");
 
@@ -6,16 +7,14 @@ const maxCards = 8;
 const startIndex = jogosData.length - maxCards;
 const limiteDeJogosData = jogosData.slice(startIndex);
 
-function cardClick(index) {
-  
-  console.log("O card " + index + " clicado!");
-
-  var valorIndex = index + (jogosData.length - 8);
-
-  // Redireciona para uma página HTML com o valor do índice como parâmetro na URL.
-  window.location.href = "pages/jogo.html?index=" + valorIndex;
-
-  console.log("Valor do índice: " + valorIndex);
+function cardClick(id) {
+  const idjogo = findGID(id);
+  if (idjogo) {
+    // Crie uma URL com a ID do jogo como parâmetro
+    window.location.href = `pages/jogo.html?id=${id}`;
+  } else {
+    console.log("Jogo não encontrado.");
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -94,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
-  limiteDeJogosData.forEach( (item, index) => {
+  limiteDeJogosData.forEach( (item) => {
     const card = createCard(item);
-    card.addEventListener('click', () => cardClick(index));
+    card.addEventListener('click', () => cardClick(item.id));
     newRelease.appendChild(card);
   });
 });

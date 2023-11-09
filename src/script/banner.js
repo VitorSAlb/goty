@@ -1,19 +1,21 @@
 import { Jogos, jogosData } from './jogos.js'
+import findGID from './jogos.js';
 
 const bannerP = document.getElementById("bannerP");
 
-const jogoEscolhido = 15
+const jogoReal = 1;
 
-function cardClick(jogoEscolhido) {
+function cardClick(jogoReal) {
 
     // Redirecione para uma página HTML com o valor do índice como parâmetro na URL.
-    window.location.href = "pages/jogo.html?index=" + jogoEscolhido;
+    window.location.href = "pages/jogo.html?id=" + jogoReal;
 
     // Use o valor do índice em seu script, por exemplo, exibindo-o no console.
-    console.log("Valor do índice: " + jogoEscolhido);
+    console.log("Valor do índice: " + jogoReal);
 }
 
-var itemDesejado = jogosData[jogoEscolhido];
+
+var itemDesejado = jogosData[0];
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -108,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (itemDesejado) {
         const capagBanner = createBanner(itemDesejado);
-        bannerP.addEventListener('click', () => cardClick(jogoEscolhido));
+        bannerP.addEventListener('click', () => cardClick(jogoReal));
         bannerP.appendChild(capagBanner);
     } else {
         console.error("O índice fornecido não é válido.");

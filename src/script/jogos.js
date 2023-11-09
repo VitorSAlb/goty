@@ -1,5 +1,6 @@
 export class Jogos {
-    constructor(title, releseData, imagesLink, publisher, genero, description, progress) {
+    constructor(id, title, releseData, imagesLink, publisher, genero, description, progress) {
+        this.id = id;
         this.title = title;
         this.releseData = releseData;
         this.imagesLink = imagesLink;
@@ -8,19 +9,45 @@ export class Jogos {
         this.description = description;
         this.progress = progress;
     }
+
+    getId() {
+        return this.id;
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    getReleseData() {
+        return this.releseData;
+    }
+
+    getPublisher() {
+        return this.publisher;
+    }
+
+    getGenero() {
+        return this.genero;
+    }
+
+    getProgress() {
+        return this.progress;
+    }
 }
 
 export const jogosData = [
     new Jogos(
+        1,
         "Starfield",
-        "00/00/0000",
+        "00/00/2023",
         "starfield",
         "Microsoft",
         "RPG | Aventura",
         "Jogo com mais de mil planetas exploraveis",
-        80,
+        100,
     ),
     new Jogos(
+        2,
         "Redfall",
         "00/00/0000",
         "redfall",
@@ -30,6 +57,7 @@ export const jogosData = [
         38,
     ),
     new Jogos(
+        3,
         "Star Wars Jedi Survivor",
         "00/00/0000",
         "star-wars-jedi-survivor",
@@ -39,6 +67,7 @@ export const jogosData = [
         57,
     ),
     new Jogos(
+        4,
         "Spider Man 02",
         "00/00/0000",
         "spider-man-2",
@@ -48,6 +77,7 @@ export const jogosData = [
         78,
     ),
     new Jogos(
+        5,
         "Baldur's Gate III",
         "00/00/0000",
         "baldurs-gate-III",
@@ -57,15 +87,17 @@ export const jogosData = [
         38,
     ),
     new Jogos(
+        6,
         "Dead Space",
-        "00/00/0000",
+        "00/00/2022",
         "dead-space-remake",
         "",
         "",
         "",
-        38,
+        97,
     ),
     new Jogos(
+        7,
         "Diablo IV",
         "00/00/0000",
         "diablo-IV",
@@ -75,6 +107,7 @@ export const jogosData = [
         38,
     ),
     new Jogos(
+        8,
         "Final Fantasy XVI",
         "00/00/0000",
         "final-fantasy-XVI",
@@ -84,6 +117,7 @@ export const jogosData = [
         38,
     ),
     new Jogos(
+        9,
         "Fortnite",
         "00/00/0000",
         "fortnite",
@@ -93,6 +127,7 @@ export const jogosData = [
         38,
     ),
     new Jogos(
+        10,
         "Minecraft",
         "00/00/0000",
         "minecraft",
@@ -102,8 +137,9 @@ export const jogosData = [
         100,
     ),
     new Jogos(
+        11,
         "Resident Evil 4",
-        "00/00/0000",
+        "10/00/2023",
         "resident-evil-4-re",
         "",
         "",
@@ -111,6 +147,7 @@ export const jogosData = [
         97,
     ),
     new Jogos(
+        12,
         "Street Fighter 6",
         "00/00/0000",
         "street-fighter-6",
@@ -120,6 +157,7 @@ export const jogosData = [
         48,
     ),
     new Jogos(
+        13,
         "Super Mario 64",
         "00/00/0000",
         "super-mario-64",
@@ -129,6 +167,7 @@ export const jogosData = [
         99,
     ),
     new Jogos(
+        14,
         "Super Mario Bros Wonder",
         "00/00/0000",
         "super-mario-bros-wonder",
@@ -138,6 +177,7 @@ export const jogosData = [
         95,
     ),
     new Jogos(
+        15,
         "The Legend of Zelda Ocarina of Time",
         "00/00/0000",
         "the-legend-of-zelda-ocarina-of-time",
@@ -147,6 +187,7 @@ export const jogosData = [
         100,
     ),
     new Jogos(
+        16,
         "The Legend of Zelda Tears of the Kingdom",
         "00/00/0000",
         "zelda-tears-of-the-kingdom",
@@ -156,3 +197,10 @@ export const jogosData = [
         96,
     ),
 ];
+
+
+function findGID(id) {
+    return jogosData.find(Jogos => Jogos.getId() === id);
+}
+
+export default findGID;
