@@ -93,6 +93,14 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
+
+  //verificar função
+  limiteDeJogosData.sort((a, b) => {
+    const dateA = a.releaseDate.split('/').reverse().join('-');
+    const dateB = b.releaseDate.split('/').reverse().join('-');
+    return new Date(dateA) - new Date(dateB);
+  });
+
   limiteDeJogosData.forEach( (item) => {
     const card = createCard(item);
     card.addEventListener('click', () => cardClick(item.id));

@@ -127,3 +127,15 @@
     background-color: #4caf50;
     transition: width 0.5s;
 }
+
+.progress-bar-green {
+    background-color: #299D49 ;
+}
+
+.progress-bar-yellow {
+    background-color: #D7AE1D;
+}
+
+.progress-bar-red {
+    background-color: #D82929;
+}   

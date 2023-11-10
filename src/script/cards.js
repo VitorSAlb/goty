@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', function() {
     return card;
   }
 
+  jogosData.sort((a, b) => a.title.localeCompare(b.title));
+
   jogosData.forEach( (item) => {
     const card = createCard(item);
     card.addEventListener('click', () => cardClick(item.id));

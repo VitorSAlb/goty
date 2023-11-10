@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.classList.add("progress-bar");
 
         if (item.progress < 50) {
-        progressBar.classList.add("progress-bar-red"); // Progresso menor que 50, cor verde
+        progressBar.classList.add("progress-bar-red");
         } else if (item.progress < 80) {
         progressBar.classList.add("progress-bar-yellow"); // Progresso menor que 80, cor amarela
         } else {
