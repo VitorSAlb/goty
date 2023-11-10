@@ -1,0 +1,129 @@
+.tr-section {
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    height: fit-content;
+    padding: 1.5rem 15rem;
+    font-family: 'Roboto', Times, serif;
+    font-weight: 100;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.rankNumber {
+    padding-top: 1px;
+}
+
+.tr-card {
+    display: flex;
+    background-color: #FFFF;
+    width: 100%;
+    height: fit-content;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.tr-card:hover {
+    opacity: 0.7;
+}
+
+.tr-photo-card {
+    justify-content: left;
+    background-color: #2d2d2d;
+    width: 310px;
+    height: 404px;
+}
+
+.tr-photo-card img {
+    border: 0.5px solid black;
+    height: 404px;
+    width: 310px;
+}
+
+.tr-info-card {
+    display: grid;
+    width: 100%;
+    margin-left: 0.5rem;
+    grid-template-rows: 15% 10% 63%;
+}
+
+.tr-name-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.tr-name-card h1 {
+    font-size: 3rem;
+    width: 70%; /* Largura máxima para o contêiner do título */
+    text-overflow: ellipsis; 
+    justify-self: left;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tr-name-card h3 {
+    justify-self: right;
+}
+
+.tr-genero-card,
+.tr-publisher-card {
+    display: grid;
+    align-items: start;
+    width: fit-content;
+    height: fit-content;
+}
+
+.tr-genero-card h3,
+.tr-publisher-card {
+    font-size: 1.4rem;
+}
+
+.tr-info-card div.score h1{
+    text-align: center;
+    font-size: small;
+}
+
+.tr-info-card div.progress-container {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.score-tr {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: baseline;
+    align-self: end;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.score-tr h4 {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.chao {
+    display: grid;
+    align-items: end;
+    grid-template-rows: 99% 1%;
+    grid-template-rows: 1fr;
+}
+
+.progress-container-tr {
+    width: 100%;
+    background-color: #ccc;
+    align-self: end;
+
+}
+
+.progress-bar {
+    width: 91%;
+    height: 3.5px;
+    background-color: #4caf50;
+    transition: width 0.5s;
+}
