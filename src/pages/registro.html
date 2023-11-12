@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTY</title>
+    <link rel="stylesheet" href="/src/style/reset.css">
+    <link rel="stylesheet" href="/src/style/global.css">
+    <link rel="stylesheet" href="/src/style/jogos.css">
+    <link rel="stylesheet" href="/src/style/banner.css">
+    <link rel="stylesheet" href="/src/style/forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/edfcb461fe.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="img" href="/src/imgs/capaGames/">
+</head>
+<body>
+    <script type="module" src="/src/script/header.js"></script>
+    
+
+    
+    <header id="cabecinha"></header>
+
+    
+
+    <main>
+        <div class="tittle-banner">
+            <h3>Registre-se</h3>
+        </div>
+        <div class="all-container">
+            <div class="container-forms">
+                <form id="registroForm">
+                    <label for="nomeSobrenome"></label>
+                    <input type="text" id="nomeSobrenome" name="nomeSobrenome" placeholder="Digite seu nome completo" required>
+            
+                    <label for="username"></label>
+                    <input type="text" id="username" name="username" placeholder="Escolha um nome de usuário" required>
+            
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu endereço de email" required>
+            
+                    <label for="senha"></label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            
+                    <label for="dataNascimento"></label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Selecione sua data de nascimento" required>
+            
+                    <button type="button" onclick="registrarUsuario()">Registre-se</button>
+                    <label><a href="/src/pages/login.html">Login</a></label>
+                </form>
+                <script type="module" src="/src/script/user.js"></script>
+            </div>
+
+            <hr>
+
+            <div class="infos-users">
+                <h1>Com uma conta, você pode:</h1>
+
+                <ul>
+                    <li><h3>Dar nota aos Jogos</h3></li>
+                    <li><h3>Ter um perfil próprio</h3></li>
+                    <li><h3>Ver seu progresso em jogos</h3></li>
+                    <li><h3>Adicionar novos jogos</h3></li>
+                    <li><h3>Adicionar novas plataformas</h3></li>
+                </ul>
+            </div>
+        </div>
+            
+    </main>
+
+    <footer>
+        <p>@COPYRIGHT BY GOTY</p>
+    </footer>
+
+</body>
+
+</html>

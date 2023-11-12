@@ -29,15 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
         listaNav.appendChild(liPesquisar);
         listaNav.appendChild(liCrud);
 
+        //Menu
+        const divMenu = document.createElement("div");
+        divMenu.classList.add("menu-icon");
+        divMenu.onclick = ("toggleMenu()");
+        divMenu.textContent = "☰";
+
         // Lista de usuário
         const listaUser = document.createElement("ul");
         listaUser.classList.add("user-log");
 
-        const liRegistro = createMenuItem("Registre-se", "#");
+        const liRegistro = createMenuItem("Registre-se", "/src/pages/registro.html");
         const liBarra = document.createElement("li");
         liBarra.classList.add("barra-ul");
         liBarra.textContent = "|";
-        const liLogin = createMenuItem("Login", "#");
+        const liLogin = createMenuItem("Login", "/src/pages/login.html");
 
         listaUser.appendChild(liRegistro);
         listaUser.appendChild(liBarra);
@@ -45,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Adiciona elementos à nav
         nav.appendChild(aLogo);
+        nav.appendChild(divMenu);
         nav.appendChild(listaNav);
         nav.appendChild(listaUser);
 

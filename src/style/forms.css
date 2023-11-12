@@ -1,0 +1,78 @@
+form {
+    max-width: 25rem;
+    margin: 0 auto;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+input {
+    width: calc(100% - 16px); /* Leva em consideração o padding de 8px em cada lado */
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #D9D9D9;
+}
+button {
+    background-color: #8C8C8C;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    width: 15rem;
+    height: 5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: x-large;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.7;
+}
+
+.container-forms {
+    background-color: #D9D9D9;
+    margin: 5rem 5rem;
+    padding: 2rem;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+.all-container {
+    display: flex;
+    padding: 5rem 0;
+}
+
+.infos-users {
+    margin: auto 5rem;
+}
+
+.infos-users h1 {
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.infos-users ul {
+    padding-left: 3rem;
+}
+
+.infos-users ul li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+label a {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+label a:hover {
+    opacity: 0.7;
+}

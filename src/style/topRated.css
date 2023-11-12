@@ -57,7 +57,7 @@
 
 .tr-name-card h1 {
     font-size: 3rem;
-    width: 70%; /* Largura máxima para o contêiner do título */
+    width: 80%; /* Largura máxima para o contêiner do título */
     text-overflow: ellipsis; 
     justify-self: left;
     overflow: hidden;
@@ -139,3 +139,68 @@
 .progress-bar-red {
     background-color: #D82929;
 }   
+
+/* Adicionado estilo para a versão quando a tela é até 1200px de largura */
+@media only screen and (max-width: 1200px) {
+    .tr-section {
+        padding: 1.5rem 5rem; /* Reduzido o espaçamento nas laterais */
+    }
+
+    .tr-card {
+        margin: 5px;
+    }
+
+    .tr-photo-card {
+        width: 155px; /* Ajustado para ocupar a largura total */
+        height: 202px; /* Ajustado para altura automática */
+    }
+
+    .tr-photo-card img {
+        width: 155px; /* Ajustado para ocupar a largura total */
+        height: 202px; /* Ajustado para altura automática */
+    }
+
+    .tr-info-card {
+        margin-left: 0; /* Ajustado para remover a margem à esquerda */
+    }
+
+    .tr-name-card h1 {
+        font-size: 2rem; /* Reduzido o tamanho do título */
+        width: 300px; /* Ajustado para ocupar a largura total */
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .tr-genero-card,
+    .tr-publisher-card {
+        width: 100%; /* Ajustado para ocupar a largura total */
+    }
+
+    .tr-info-card div.score h1 {
+        font-size: smaller; /* Reduzido o tamanho do texto */
+    }
+
+    .tr-info-card div.progress-container {
+        width: 100%; /* Ajustado para ocupar a largura total */
+    }
+
+    .score-tr {
+        font-size: 1.5rem; /* Reduzido o tamanho do texto */
+    }
+
+    .score-tr h4 {
+        font-size: 0.8rem; /* Reduzido o tamanho do texto */
+    }
+
+    .chao {
+        grid-template-rows: 1fr; /* Removido o segundo conjunto de linhas do grid */
+    }
+
+    .progress-container-tr {
+        width: 100%; /* Ajustado para ocupar a largura total */
+    }
+
+    .progress-bar {
+        height: 2px; /* Reduzido a altura da barra de progresso */
+    }
+}
