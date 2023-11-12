@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="/src/style/topRated.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/edfcb461fe.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="img" href="/src/imgs/capaGames/">
 </head>
 <body>
-    <script type="module" src="/src/script/cards.js"></script>
-    <script type="module" src="/src/script/tr-section.js"></script>
+    <script type="module" src="/src/script/search.js"></script>
     <script type="module" src="/src/script/header.js"></script>
     
     <header id="cabecinha"></header>
@@ -25,24 +25,27 @@
     <main>
        
         <div>
-            <div class="tittle">
-                <div class="title-search">
-                    <ul>
-                        <li><a id="tnrJogos" href="#" onclick="changeSectionGames()">Jogos</a></li>
-                        <li><a id="ttrJogos" href="#" onclick="changeSectionForTRS()">Melhores Avaliados</a></li>
-                        <li><a>Adicionar</a></li>
-                    </ul>
-                </div>
+            <div class="tittleP">
+
+                <h2>Pesquisar</h2>
+
+                <div id="searchContainer">
+                    <input type="text" id="searchInput" placeholder="Pesquisar">
+                    <button id="searchButton">
+                        <span class="icon"><i class="fas fa-search"></i></span>
+                    </button>
+                  </div>
+                
+            </div>
+
+            <div class="hr">
                 <hr>
             </div>
 
-            <div class="nr-section" id="container">
+            <div class="nr-section" id="containerP">
             </div>
             
-            <div class="top-rated-section" id="trs-container"></div>
-        </div>
     </main>
-    <script src="/src/script/mudarSection.js"/>
 
     <footer>
         <p>@COPYRIGHT BY GOTY</p>

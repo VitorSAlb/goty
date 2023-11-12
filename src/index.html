@@ -7,39 +7,25 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/global.css">
     <link rel="stylesheet" href="style/banner.css">
+    <link rel="stylesheet" href="style/cardao.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <script type="module" src="/src/script/nr-section.js"></script>
-    <script type="module" src="/src/script/tgy.js"></script>
+<body>   
     <script type="module" src="/src/script/banner.js"></script>
-    <header>
-        <nav>
-            <a href="/src/index.html"><img src="imgs/GOTY-logo.svg" alt="Logo do site Game Of The Year"></a>
-
-            <ul class="menu-nav">
-                <li><a>Home</a></li>
-                <li><a href="/src/pages/jogos.html">Jogos</a></li>
-                <li><a>Categorias</a></li>
-                <li><a>Plataformas</a></li>
-            </ul>
-            <ul class="user-log">
-                <li><a>Registre-se</a></li>
-                <li class="barra-ul">|</li>
-                <li><a>Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <script type="module" src="/src/script/header.js"></script>
+    <script type="module" src="/src/script/pesquisar.js"></script>
+    
+    <header id="cabecinha"></header>
 
     
 
     <main>
         <!-- Banner Section -->
         <div class="tittle-banner">
-            <h3>Most Popular Today</h3>
+            <h3>Mais Popular</h3>
         </div>
         <div id="bannerP">
             
@@ -47,7 +33,7 @@
         <!-- New Releases-->
         <div>
             <div class="tittle">
-                <h2>New Releases</h2>
+                <h2>Últimos Lançamentos</h2>
                 <hr>
             </div>
 
@@ -55,13 +41,14 @@
                 
             </div> 
         </div>
+        <script type="module" src="/src/script/nr-section.js"></script>
 
         <!-- TGY e Cards com diversos jogos-->
         
         <div class="section-two">
             <div class="tgy-section">
                 <div class="tittle">
-                    <h2>Top Games</h2>
+                    <h2>Melhores Jogos</h2>
                     <hr>
                 </div>
 
@@ -70,35 +57,39 @@
                 </div> 
             </div>
 
-            <div class="cards-slider">
+            <div class="cardao-section" >
                 <div class="tittle">
                     <h2>cards-slider</h2>
                     <hr>
                 </div>
-                   <div class="cardao">
-                        <div class="photo-cardao">
-                            <img>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="name-card">
-                                <h1>Nome do Jogo</h1>
-                                <p>dd/mm/aaaa</p>
-                            </div>
-                            <div class="publisher-card">
-                                <p>publisher</p>
+                <div class="cards-slider" id="cardao">
+                    <!-- <div class="cardao">
+                            <div class="photo-cardao">
+                                <img>
                             </div>
 
-                            <div class="score">
-                                <h1>91</h1>
+                            <div class="info-card">
+                                <div class="name-card">
+                                    <h1>Nome do Jogo</h1>
+                                    <p>dd/mm/aaaa</p>
+                                </div>
+                                <div class="publisher-card">
+                                    <p>publisher</p>
+                                </div>
+
+                                <div class="score">
+                                    <h1>91</h1>
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-bar" id="progress"></div>
+                                </div>
                             </div>
-                            <div class="progress-container">
-                                <div class="progress-bar" id="progress"></div>
-                            </div>
-                        </div>
-                   </div>
+                    </div> -->
+                </div>
             </div>
         </div>
+        <script type="module" src="/src/script/tgy.js"></script>
+        <script type="module" src="/src/script/cardao.js"></script>
     </main>
 
     <footer>

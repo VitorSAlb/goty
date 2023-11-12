@@ -44,7 +44,7 @@
     display: grid;
     width: 100%;
     margin-left: 0.5rem;
-    grid-template-rows: 15% 10% 63%;
+    grid-template-rows: min-content max-content;
 }
 
 .tr-name-card {

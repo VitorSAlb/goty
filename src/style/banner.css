@@ -41,7 +41,7 @@
     display: grid;
     width: 100%;
     margin-left: 0.5rem;
-    grid-template-rows: 10% 10% 80%;
+    grid-template-rows: min-content max-content;
 }
 
 .nameg-banner {
@@ -50,6 +50,11 @@
     width: 100%;
     justify-content: space-between;
     height: fit-content;
+}
+
+.nameg-banner h1 {
+    font-weight: 400;
+    font-size: 3rem;
 }
 
 .publisherg-banner {

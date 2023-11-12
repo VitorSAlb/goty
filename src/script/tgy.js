@@ -90,6 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const progressBar = document.createElement("div");
     progressBar.classList.add("progress-bar");
+
+    if (item.progress < 50) {
+      progressBar.classList.add("progress-bar-red"); 
+    } else if (item.progress < 80) {
+      progressBar.classList.add("progress-bar-yellow");
+    } else {
+      progressBar.classList.add("progress-bar-green"); 
+    }
+
+    progressBar.style.width = `${item.progress}%`;
     progressBar.id = "progress";
 
     infoCard.appendChild(nameCard);

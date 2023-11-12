@@ -175,19 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return cardP;
     };
 
-    // if (itemDesejado) {
-    //     // Agora você tem o objeto do jogo com base na ID
-    //     const cardP = createGamePG(itemDesejado);
-    //     jogoPrincipal.appendChild(cardP);
-    // } else {
-    //     console.log("Jogo não encontrado com a ID: " + id);
-    // }
-
-    // jogosData.forEach((itemDesejado) => {
-    //     const cardP = createGamePG(itemDesejado);
-    //     jogoPrincipal.appendChild(cardP);
-    // })
-
     if (jogoDesejado) {
         const cardP = createGamePG(jogoDesejado);
         jogoPrincipal.appendChild(cardP);

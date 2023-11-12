@@ -2,10 +2,8 @@ import { Jogos, jogosData } from './jogos.js';
 import findGID from './jogos.js';
 
 const newRelease = document.getElementById("newRelease");
-
-const maxCards = 8;
-const startIndex = jogosData.length - maxCards;
-const limiteDeJogosData = jogosData.slice(startIndex);
+  
+const nrlimiteDeJogosData = jogosData.slice(0, 8);
 
 function cardClick(id) {
   const idjogo = findGID(id);
@@ -95,13 +93,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   //verificar função
-  limiteDeJogosData.sort((a, b) => {
-    const dateA = a.releaseDate.split('/').reverse().join('-');
-    const dateB = b.releaseDate.split('/').reverse().join('-');
-    return new Date(dateA) - new Date(dateB);
+  nrlimiteDeJogosData.sort((a, b) => {
+    const yearA = parseInt(a.releseData.substring(6, 10), 10);
+    const yearB = parseInt(b.releseData.substring(6, 10), 10);
+    if (yearB !== yearA) {
+        return yearB - yearA; // Ordenar por ano
+    }
+
+    const monthA = parseInt(a.releseData.substring(3, 5), 10);
+    const monthB = parseInt(b.releseData.substring(3, 5), 10);
+    if (monthB !== monthA) {
+        return monthB - monthA; // Ordenar por mês se anos são iguais
+    }
+
+    const dayA = parseInt(a.releseData.substring(0, 2), 10);
+    const dayB = parseInt(b.releseData.substring(0, 2), 10);
+    return dayB - dayA; // Ordenar por dia se anos e meses são iguais
   });
 
-  limiteDeJogosData.forEach( (item) => {
+  nrlimiteDeJogosData.forEach( (item) => {
     const card = createCard(item);
     card.addEventListener('click', () => cardClick(item.id));
     newRelease.appendChild(card);

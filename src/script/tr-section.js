@@ -83,7 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
         publisherCard.classList.add("tr-publisher-card");
 
         const publisherElement = document.createElement("h3");
-        publisherElement.textContent = `${item.publisher}`;
+        publisherElement.innerHTML = `<strong style="font-weight:500">Plataforma:</strong> ${item.publisher}`;
+
 
         const generoCard = document.createElement("div");
         generoCard.classList.add("tr-genero-card");
@@ -91,9 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
         publisherCard.appendChild(publisherElement);
 
         const generoElement = document.createElement("h3");
-        generoElement.textContent = `${item.generoCard}`;
+        generoElement.innerHTML = `<strong style="font-weight:500">Gênero:</strong> ${item.genero}`;
 
-        generoCard.appendChild(publisherElement);
+        generoCard.appendChild(generoElement);
 
         const chao = document.createElement("div");
         chao.classList.add("chao");
