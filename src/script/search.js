@@ -6,7 +6,7 @@ const container = document.getElementById("containerP");
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 
-let filteredJogosData = []; // Array para armazenar os jogos filtrados
+let filtroJogosData = []; // Array para armazenar os jogos filtrados
 
 function cardClick(id) {
   const jogo = findGID(id);
@@ -109,12 +109,12 @@ function searchGames() {
   const searchTerm = searchInput.value.toLowerCase();
 
   // Filtra os jogos com nomes similares ao termo de pesquisa
-  filteredJogosData = jogosData.filter((item) =>
+  filtroJogosData = jogosData.filter((item) =>
     item.title.toLowerCase().includes(searchTerm)
   );
 
   // Renderiza os cards dos jogos filtrados
-  renderCards(filteredJogosData);
+  renderCards(filtroJogosData);
 }
 
 // Adiciona um ouvinte de evento para o botão de pesquisa
