@@ -1,0 +1,91 @@
+body {
+    background-color: #FFFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin: 0;
+}
+
+main {
+    background-color: #d4d4d4;
+    border-radius: 30px;
+    height: 720px;
+}
+
+.all-container {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 20px;
+}
+
+.tittle {
+    height: fit-content;
+    font-weight: 200;
+    padding: 1rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 750px;
+    height: 60px;
+    padding: 8px;
+    box-sizing: border-box;
+
+}
+
+#description {
+    height: 200px;
+}
+
+.right-column {
+    padding-right: 10px;
+}
+
+button {
+    width: 700px;
+    height: 215px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 5rem;
+}
+
+.voltar {
+    font-size: xx-large;
+    margin-left: 2rem;
+    padding-top: 1rem;
+}
+
+
+
+#drop-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFF;
+    height: 275px;
+}
+
+#drop-area.dragover {
+    background-color: #f0f0f0;
+}

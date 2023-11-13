@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const liHome = createMenuItem("Home", "/src/index.html");
         const liJogos = createMenuItem("Jogos", "/src/pages/jogos.html");
         const liPesquisar = createMenuItem("Pesquisar", "/src/pages/pesquisa.html");
-        const liCrud = createMenuItem("CRUD", "#");
+        const liCrud = createMenuItem("CRUD", "/src/pages/listadosJogos.html");
 
         listaNav.appendChild(liHome);
         listaNav.appendChild(liJogos);

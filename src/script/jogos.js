@@ -243,4 +243,23 @@ function findGID(id) {
     return jogosData.find(Jogos => Jogos.getId() === id);
 }
 
+//
+//
+// document.getElementById('addButton').addEventListener('click', function() {
+//     const title = document.getElementById('title').value;
+//     const genero = document.getElementById('genero').value;
+//     const publisher = document.getElementById('publisher').value;
+//     const releseData = document.getElementById('releseData').value;
+//     const description = document.getElementById('description').value;
+//     const imagesLink = document.getElementById('imagesLink').files[0];
+
+//     // Aqui você pode criar uma nova instância da classe Jogo e fazer o que precisar com os dados
+//     jogosData = new Jogo(id, title, publisher, genero, releseData, description, imagesLink, progress = 0)
+//     const games = JSON.parse(localStorage.getItem('games')) || [];
+//     games.push(novoJogo);
+//     localStorage.setItem('games', JSON.stringify(games));
+
+//     window.location.href = 'listaJogos.html';
+// });
+
 export default findGID;

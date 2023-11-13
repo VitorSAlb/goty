@@ -81,10 +81,13 @@ hr {
     background-color: #000000;
 }
 
-
-
 .tittle {
+    font-family: 'Roboto', sans-serif;
     padding: 4rem 5rem 1rem 5rem;
+}
+
+.tittle h1 {
+    font-weight: 300;
 }
 
 .tittle h2 {
