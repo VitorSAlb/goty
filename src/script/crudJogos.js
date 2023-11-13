@@ -92,9 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return li;
     }
 
-    // Adiciona a barra de ação ao corpo do documento
-    document.body.appendChild(createCrudAction());
-
     // Itera sobre os jogos e cria a lista
     jogosData.forEach( (item) => {
         const list = createList(item);
