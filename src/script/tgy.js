@@ -3,15 +3,14 @@ import findGID from './jogos.js';
 
 const tgyScript = document.getElementById("tgyScript");
 
-// Função de comparação para classificar por progresso decrescente e data de lançamento decrescente
+
 function compareItems(a, b) {
-  // Primeiro, compare o progresso (progress) de forma decrescente
   if (a.progress > b.progress) {
     return -1;
   } else if (a.progress < b.progress) {
     return 1;
   } else {
-    // Se o progresso for igual, compare as datas de lançamento (releaseDate) de forma decrescente
+
     if (a.releaseDate > b.releaseDate) {
       return -1;
     } else if (a.releaseDate < b.releaseDate) {
@@ -21,10 +20,8 @@ function compareItems(a, b) {
   }
 }
 
-// Classifique a matriz jogosData com base na função de comparação
 jogosData.sort(compareItems);
 
-// Pegue os 6 primeiros itens após a classificação
 const top6Games = jogosData.slice(0, 6);
 
 
@@ -32,8 +29,7 @@ const top6Games = jogosData.slice(0, 6);
 function cardClick(id) {
   const jogo = findGID(id);
   if (jogo) {
-    // Crie uma URL com a ID do jogo como parâmetro
-    window.location.href = `pages/jogo.html?id=${id}`;
+    window.location.href = `/src/pages/jogo.html?id=${id}`;
   } else {
     console.log("Jogo não encontrado.");
   }

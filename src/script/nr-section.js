@@ -8,8 +8,7 @@ const nrlimiteDeJogosData = jogosData.slice(0, 8);
 function cardClick(id) {
   const idjogo = findGID(id);
   if (idjogo) {
-    // Crie uma URL com a ID do jogo como parâmetro
-    window.location.href = `pages/jogo.html?id=${id}`;
+    window.location.href = `/src/pages/jogo.html?id=${id}`;
   } else {
     console.log("Jogo não encontrado.");
   }
@@ -97,18 +96,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearA = parseInt(a.releseData.substring(6, 10), 10);
     const yearB = parseInt(b.releseData.substring(6, 10), 10);
     if (yearB !== yearA) {
-        return yearB - yearA; // Ordenar por ano
+        return yearB - yearA; 
     }
 
     const monthA = parseInt(a.releseData.substring(3, 5), 10);
     const monthB = parseInt(b.releseData.substring(3, 5), 10);
     if (monthB !== monthA) {
-        return monthB - monthA; // Ordenar por mês se anos são iguais
+        return monthB - monthA; 
     }
 
     const dayA = parseInt(a.releseData.substring(0, 2), 10);
     const dayB = parseInt(b.releseData.substring(0, 2), 10);
-    return dayB - dayA; // Ordenar por dia se anos e meses são iguais
+    return dayB - dayA; 
   });
 
   nrlimiteDeJogosData.forEach( (item) => {

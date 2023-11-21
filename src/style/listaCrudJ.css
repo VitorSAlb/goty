@@ -5,6 +5,12 @@
 
 .tittle h1 {
     align-self: center;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .adicionar a,

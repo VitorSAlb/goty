@@ -6,8 +6,7 @@ const Descubra = document.getElementById("Descubra");
 function cardClick(id) {
   const jogo = findGID(id);
   if (jogo) {
-    // Crie uma URL com a ID do jogo como parâmetro
-    window.location.href = `jogo.html?id=${id}`;
+    window.location.href = `/src/pages/jogo.html?id=${id}`;
   } else {
     console.log("Jogo não encontrado.");
   }
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const shuffledJogosData = jogosData.sort(() => Math.random() - 0.5);
 
-  // Limite o número de cartões a serem exibidos para 8
   const numberOfCardsToShow = 8;
   const cardsToShow = shuffledJogosData.slice(0, numberOfCardsToShow);
 
@@ -74,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
     progressBar.classList.add("progress-bar");
 
     if (item.progress < 50) {
-      progressBar.classList.add("progress-bar-red"); // Progresso menor que 50, cor verde
+      progressBar.classList.add("progress-bar-red"); 
     } else if (item.progress < 80) {
-      progressBar.classList.add("progress-bar-yellow"); // Progresso menor que 80, cor amarela
+      progressBar.classList.add("progress-bar-yellow"); 
     } else {
-      progressBar.classList.add("progress-bar-green"); // Progresso igual ou maior que 80, cor vermelha
+      progressBar.classList.add("progress-bar-green"); 
     }
 
     progressBar.style.width = `${item.progress}%`;

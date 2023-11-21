@@ -4,13 +4,12 @@ import findGID from './jogos.js';
 const trContainer = document.getElementById("trs-container");
 
 function compareItems(a, b) {
-// Primeiro, compare o progresso (progress) de forma decrescente
     if (a.progress > b.progress) {
         return -1;
     } else if (a.progress < b.progress) {
         return 1;
     } else {
-        // Se o progresso for igual, compare as datas de lançamento (releaseDate) de forma decrescente
+
         if (a.releaseDate > b.releaseDate) {
         return -1;
         } else if (a.releaseDate < b.releaseDate) {
@@ -27,7 +26,7 @@ const top10Games = jogosData.slice(0, 10);
 function cardClick(id) {
     const jogo = findGID(id);
     if(jogo) {
-        window.location.href = `jogo.html?id=${id}`;
+        window.location.href = `/src/pages/jogo.html?id=${id}`;
     } else {
         console.log("Jogo não encontrado");
     }
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         publisherCard.classList.add("tr-publisher-card");
 
         const publisherElement = document.createElement("h3");
-        publisherElement.innerHTML = `<strong style="font-weight:500">Plataforma:</strong> ${item.publisher}`;
+        publisherElement.innerHTML = `<strong style="font-weight:500">Plataforma:</strong> \n ${item.publisher}`;
 
 
         const generoCard = document.createElement("div");
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         publisherCard.appendChild(publisherElement);
 
         const generoElement = document.createElement("h3");
-        generoElement.innerHTML = `<strong style="font-weight:500">Gênero:</strong> ${item.genero}`;
+        generoElement.innerHTML = `<strong style="font-weight:500">Gênero:</strong> \n ${item.genero}`;
 
         generoCard.appendChild(generoElement);
 

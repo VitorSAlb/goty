@@ -6,6 +6,12 @@
     justify-content: center;
 }
 
+.user-info p {
+    text-align: justify;
+    margin-top: 1.5rem;
+    width: 300px;
+}
+
 .user-info img {
     width: 184px;
     height: 184px;

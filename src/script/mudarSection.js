@@ -18,7 +18,6 @@ function changeSectionGames() {
 }
 
 function changeSectionForTRS() {
-    // Obtém o elemento com a classe 'nr-section' e ID 'container'
     const section = document.getElementById('container');
     section.style.display = 'none';
 

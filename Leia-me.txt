@@ -1,0 +1,4 @@
+Para abrir o site com todas as funcionalidades indicamos que abra diretamente da IDE com a pasta raiz sendo a "EntregaP1A3", caso abra diretamente pela pasta "src", pode haver conflito entre os arquivos.
+
+Recomendado:
+Abrir pelo VScode usando o live server!

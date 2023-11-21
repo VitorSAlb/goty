@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Lista de navegação
         const listaNav = document.createElement("ul");
         listaNav.classList.add("menu-nav");
+        
 
         const liHome = createMenuItem("Home", "/src/index.html");
         const liJogos = createMenuItem("Jogos", "/src/pages/jogos.html");
@@ -32,12 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
         //Menu
         const divMenu = document.createElement("div");
         divMenu.classList.add("menu-icon");
+        divMenu.id = "menuNav";
         divMenu.onclick = ("toggleMenu()");
         divMenu.textContent = "☰";
+
+        divMenu.addEventListener('click', function() {
+            toggleMenu(); 
+        });
 
         // Lista de usuário
         const listaUser = document.createElement("ul");
         listaUser.classList.add("user-log");
+
 
         const liRegistro = createMenuItem("Registre-se", "/src/pages/registro.html");
         const liBarra = document.createElement("li");
@@ -55,8 +62,62 @@ document.addEventListener('DOMContentLoaded', function() {
         nav.appendChild(listaNav);
         nav.appendChild(listaUser);
 
+        divMenu.addEventListener('click', function () {
+            toggleMenu(); // Função para mostrar/ocultar o menu
+        });
+
+        // Adiciona evento de redimensionamento da janela
+        window.addEventListener('resize', function () {
+            updateMenuVisibility(); // Atualiza a visibilidade do menu ao redimensionar
+        });
+
         return nav;
     }
+
+    function toggleMenu() {
+        const listaNav = document.querySelector(".menu-nav");
+        const listaUser = document.querySelector(".user-log");
+        const liBarra = document.querySelector(".barra-ul")
+    
+        // Troca a visibilidade do menu
+        if (listaNav.style.display === "flex" || listaUser.style.display === "flex") {
+            listaNav.style.display = "none";
+            listaUser.style.display = "none";
+        } else {
+            listaNav.style.display = "grid";
+            listaNav.style.zIndex = "1";
+            listaNav.style.marginTop = "2rem";
+            listaUser.style.display = "grid";
+            listaUser.style.zIndex = "1";
+            listaUser.style.marginTop = "9.5rem";
+            listaUser.style.paddingTop = "1rem";
+            liBarra.style.display = "none"
+            
+        }
+    }
+    
+
+    function updateMenuVisibility() {
+        const listaNav = document.querySelector(".menu-nav");
+        const listaUser = document.querySelector(".user-log");
+
+        // Verifica o tamanho da tela e atualiza a visibilidade do menu
+        if (window.innerWidth <= 1200) {
+            listaNav.style.display = "none";
+            listaNav.style.zIndex = "1";
+            listaNav.style.marginTop = "0";
+            listaUser.style.display = "none";
+            listaUser.style.marginTop = "0";
+            listaUser.style.paddingTop = "0";
+
+            
+        } else {
+            listaNav.style.display = "flex";
+            listaUser.style.display = "flex";
+        }
+
+    }
+
 
     function createMenuItem(text, href) {
         const li = document.createElement("li");

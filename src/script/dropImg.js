@@ -21,6 +21,5 @@ const dropArea = document.getElementById('drop-area');
     });
 
     fileInput.addEventListener('change', () => {
-        // Aqui você pode adicionar código para lidar com a seleção de arquivo
         console.log('Arquivo selecionado:', fileInput.files[0]);
     });

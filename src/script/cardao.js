@@ -5,7 +5,6 @@ const cardaosection = document.getElementById("cardao");
 
 const indiceAleatorio = Math.floor(Math.random() * jogosData.length);
 
-// Escolher jogo do cardão
 const gameID = jogosData[indiceAleatorio].id;
 
 const limiteDeJogosData = jogosData.filter((item) => item.id === gameID);
@@ -13,8 +12,7 @@ const limiteDeJogosData = jogosData.filter((item) => item.id === gameID);
 function cardClick(id) {
   const idjogo = findGID(id);
   if (idjogo) {
-    // Crie uma URL com a ID do jogo como parâmetro
-    window.location.href = `pages/jogo.html?id=${id}`;
+    window.location.href = `/src/pages/jogo.html?id=${id}`;
   } else {
     console.log("Jogo não encontrado.");
   }

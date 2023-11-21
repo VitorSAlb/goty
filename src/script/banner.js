@@ -3,16 +3,13 @@ import findGID from './jogos.js';
 
 const bannerP = document.getElementById("bannerP");
 
-//jogo real vc muda o jogo que vai aparecer no banner
 const jogoReal = 0;
 const jogoSoma = jogoReal + 1;
 
 function cardClick(jogoSoma) {
 
-    // Redirecione para uma página HTML com o valor do índice como parâmetro na URL.
-    window.location.href = "pages/jogo.html?id=" + jogoSoma;
+    window.location.href = "/src/pages/jogo.html?id=" + jogoSoma;
 
-    // Use o valor do índice em seu script, por exemplo, exibindo-o no console.
     console.log("Valor do índice: " + jogoSoma);
 }
 
@@ -86,11 +83,11 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.classList.add("progress-bar");
 
         if (item.progress < 50) {
-            progressBar.classList.add("progress-bar-red"); // Progresso menor que 50, cor verde
+            progressBar.classList.add("progress-bar-red"); 
         } else if (item.progress < 80) {
-            progressBar.classList.add("progress-bar-yellow"); // Progresso menor que 80, cor amarela
+            progressBar.classList.add("progress-bar-yellow"); 
         } else {
-            progressBar.classList.add("progress-bar-green"); // Progresso igual ou maior que 80, cor vermelha
+            progressBar.classList.add("progress-bar-green"); 
         }
 
         progressBar.style.width = `${item.progress}%`;

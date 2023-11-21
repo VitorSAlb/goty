@@ -2,8 +2,7 @@ import { Jogos, jogosData } from './jogos.js'
 import findGID from './jogos.js';
 
 const jogoPrincipal = document.getElementById("jogoPrincipal");
-// const cardClicado = cardClick();
-//ideia, os dois numeros do slice eu consigo selecionar o jogo, caso eu identifique jogo por jogo e consiguirei caminhar entre ele
+
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
@@ -84,11 +83,11 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.classList.add("progress-bar");
 
         if (item.progress < 50) {
-            progressBar.classList.add("progress-bar-red"); // Progresso menor que 50, cor verde
+            progressBar.classList.add("progress-bar-red"); 
         } else if (item.progress < 80) {
-            progressBar.classList.add("progress-bar-yellow"); // Progresso menor que 80, cor amarela
+            progressBar.classList.add("progress-bar-yellow"); 
         } else {
-            progressBar.classList.add("progress-bar-green"); // Progresso igual ou maior que 80, cor vermelha
+            progressBar.classList.add("progress-bar-green"); 
         }
 
         progressBar.style.width = `${item.progress}%`;

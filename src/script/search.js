@@ -6,12 +6,12 @@ const container = document.getElementById("containerP");
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 
-let filtroJogosData = []; // Array para armazenar os jogos filtrados
+let filtroJogosData = []; 
 
 function cardClick(id) {
   const jogo = findGID(id);
   if (jogo) {
-    window.location.href = `jogo.html?id=${id}`;
+    window.location.href = `/src/pages/jogo.html?id=${id}`;
   } else {
     console.log("Jogo não encontrado.");
   }
@@ -74,11 +74,11 @@ function createCard(item) {
   progressBar.classList.add("progress-bar");
 
   if (item.progress < 50) {
-    progressBar.classList.add("progress-bar-red"); // Progresso menor que 50, cor verde
+    progressBar.classList.add("progress-bar-red"); 
   } else if (item.progress < 80) {
-    progressBar.classList.add("progress-bar-yellow"); // Progresso menor que 80, cor amarela
+    progressBar.classList.add("progress-bar-yellow"); 
   } else {
-    progressBar.classList.add("progress-bar-green"); // Progresso igual ou maior que 80, cor vermelha
+    progressBar.classList.add("progress-bar-green"); 
   }
 
   progressBar.style.width = `${item.progress}%`;
@@ -97,7 +97,7 @@ function createCard(item) {
 }
 
 function renderCards(data) {
-  container.innerHTML = ''; // Limpa o conteúdo do container antes de renderizar os novos cards
+  container.innerHTML = ''; 
   data.forEach((item) => {
     const card = createCard(item);
     card.addEventListener('click', () => cardClick(item.id));
@@ -108,18 +108,14 @@ function renderCards(data) {
 function searchGames() {
   const searchTerm = searchInput.value.toLowerCase();
 
-  // Filtra os jogos com nomes similares ao termo de pesquisa
   filtroJogosData = jogosData.filter((item) =>
     item.title.toLowerCase().includes(searchTerm)
   );
 
-  // Renderiza os cards dos jogos filtrados
   renderCards(filtroJogosData);
 }
 
-// Adiciona um ouvinte de evento para o botão de pesquisa
 searchButton.addEventListener("click", searchGames);
 
-// Renderiza os cards de todos os jogos inicialmente
 renderCards(jogosData);
 

@@ -6,8 +6,7 @@ const containerCrudJ = document.getElementById("containerCrudJ");
 function cardClick(id) {
     const jogo = findGID(id);
     if (jogo) {
-        // Crie uma URL com a ID do jogo como parâmetro
-        window.location.href = `jogo.html?id=${id}`;
+        window.location.href = `/src/pages/jogo.html?id=${id}`;
     } else {
         console.log("Jogo não encontrado.");
     }
@@ -31,12 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         infoJogo.appendChild(title);
 
-        const crudAction = createCrudAction(); // Adiciona a barra de ação
+        const crudAction = createCrudAction(); 
 
         list.appendChild(infoJogo);
         list.appendChild(crudAction);
 
-        // Adiciona o item à lista
         containerCrudJ.appendChild(list);
     }
 
@@ -92,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return li;
     }
 
-    // Itera sobre os jogos e cria a lista
+    
     jogosData.forEach( (item) => {
         const list = createList(item);
     });

@@ -204,3 +204,47 @@
         height: 2px; /* Reduzido a altura da barra de progresso */
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .tr-section {
+        padding: 1.5rem 0;
+        width: 430%;
+    }
+
+    .tr-photo-card {
+        margin-left: 1rem;
+    }
+
+    .tr-name-card {
+        display: grid;
+    }
+
+    .tr-name-card h1 {
+        font-size: 2rem;
+        width: 100%; /* Largura máxima para o contêiner do título */
+        text-overflow: ellipsis; 
+        justify-self: left;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .tr-name-card h3 {
+        display: none;
+    }
+
+    .tr-info-card {
+        width: 200px;
+    }
+
+    .tr-genero-card h3,
+    .tr-publisher-card {
+        font-size: 0.7rem;
+    }
+
+    .chao,
+    .score-tr {
+        width: 100%;
+    }
+
+
+}
